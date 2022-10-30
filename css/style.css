@@ -1,11 +1,48 @@
 * {
   margin: 0;
   padding: 0;
+  border: none;
   box-sizing: border-box;
 }
 
-body {
-  /* background: #136a8a; 
-  background: -webkit-linear-gradient(to right, #267871, #136a8a); 
-  background: linear-gradient(to right, #267871, #136a8a); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.container {
+  height: 100vh;
+  background: #136a8a;
+  background: -webkit-linear-gradient(to right, #267871, #136a8a);
+  background: linear-gradient(to right, #267871, #136a8a);
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+form input {
+  border: 1px solid black;
+  width: 15rem;
+  height: 2rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #49708b;
+  color: rgb(187, 186, 186);
+}
+::placeholder {
+  color: rgb(187, 186, 186);
+}
+input[type="submit"] {
+  width: 5rem;
+  border-radius: 5px;
+  background-color: #184d5c;
+}
+.card {
+  background-color: #0000002c;
+  padding: 4rem;
+  border-radius: 1rem;
 }
