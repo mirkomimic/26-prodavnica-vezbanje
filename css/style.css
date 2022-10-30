@@ -3,6 +3,9 @@
   padding: 0;
   border: none;
   box-sizing: border-box;
+  color: white;
+  /* font-size: 1rem; */
+  font-family: Verdana sans-serif;
 }
 
 .container {
@@ -24,25 +27,65 @@
   align-items: center;
   gap: 1rem;
 }
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
 form input {
   border: 1px solid black;
   width: 15rem;
   height: 2rem;
   padding: 5px;
   border-radius: 5px;
-  background-color: #49708b;
-  color: rgb(187, 186, 186);
+  background-color: rgb(232 232 232);
+  color: black;
 }
 ::placeholder {
-  color: rgb(187, 186, 186);
+  color: rgb(0 0 0);
 }
 input[type="submit"] {
   width: 5rem;
   border-radius: 5px;
-  background-color: #184d5c;
+  background-color: #52cbed;
 }
 .card {
   background-color: #0000002c;
   padding: 4rem;
   border-radius: 1rem;
+}
+.shop-container {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+aside {
+  width: 100%;
+  border: 1px solid black;
+}
+.shop-cards {
+  padding: 1rem;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.shop-cards form {
+  margin: auto;
+}
+.shop-card {
+  background-color: rgba(0, 0, 0, 0.372);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  max-width: 280px;
+}
+.shop-card-img {
+  border-radius: 1rem;
+  overflow: hidden;
 }
