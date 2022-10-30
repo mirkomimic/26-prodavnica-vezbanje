@@ -9,18 +9,20 @@
 }
 
 .container {
-  height: 100vh;
+  /* height: 100vh; */
   background: #136a8a;
   background: -webkit-linear-gradient(to right, #267871, #136a8a);
   background: linear-gradient(to right, #267871, #136a8a);
 }
-.login-container {
+/* login */
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
-.login-container form {
+.form-container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,6 +52,8 @@ input[type="submit"] {
   border-radius: 5px;
   background-color: #52cbed;
 }
+/* shop */
+
 .card {
   background-color: #0000002c;
   padding: 4rem;
@@ -58,6 +62,7 @@ input[type="submit"] {
 .shop-container {
   display: grid;
   grid-template-columns: 30% 1fr;
+  /* height: auto; */
 }
 aside {
   width: 100%;

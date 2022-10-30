@@ -15,6 +15,9 @@
       <form action="logout.php" method="get">
         <input type="submit" value="Logout" name="logout">
       </form>
+      <form action="logout.php" method="get">
+        <input type="submit" value="Add" name="add-item">
+      </form>
     </div>
     <div class="shop-container">
       <aside></aside>
@@ -34,7 +37,6 @@
               <p>Stock: <?= $item['stock'] ?></p>
             </div>
             <div class="admin-shop-input">
-              <input type="submit" value="Add" name="add-item">
               <input type="submit" value="Edit" name="edit-item">
             </div>
          </article>
