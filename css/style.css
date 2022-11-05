@@ -35,6 +35,15 @@ h2 {
   color: white;
   text-align: center;
 }
+select {
+  border: 1px solid black;
+  width: 15rem;
+  height: 2rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(232 232 232);
+  color: black;
+}
 form input {
   border: 1px solid black;
   width: 15rem;
@@ -51,7 +60,16 @@ input[type="submit"] {
   width: 5rem;
   border-radius: 5px;
   background-color: #52cbed;
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
+input[type="submit"]:hover {
+  -webkit-box-shadow: inset 9px -7px 65px -18px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: inset 9px -7px 65px -18px rgba(0, 0, 0, 0.76);
+  box-shadow: inset 9px -7px 65px -18px rgba(0, 0, 0, 0.76);
+}
+
 /* shop */
 
 .card {
@@ -65,8 +83,12 @@ input[type="submit"] {
   /* height: auto; */
 }
 aside {
+  padding: 1rem;
   width: 100%;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .shop-cards {
   padding: 1rem;
@@ -74,12 +96,13 @@ aside {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  /* align-items: start; */
 }
 .shop-cards form {
-  margin: auto;
+  margin: 0 auto;
 }
 .shop-card {
-  background-color: rgba(0, 0, 0, 0.372);
+  background-color: rgb(0 0 0 / 19%);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -89,8 +112,74 @@ aside {
   text-align: center;
   padding: 1rem;
   max-width: 280px;
+  transition: all 0.5s ease;
+}
+
+.aside-search {
+  background-color: rgb(0 0 0 / 19%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+aside fieldset {
+  border: 1px solid #52cbed;
+  width: 12rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+aside legend {
+  padding: 0 5px;
+}
+aside fieldset label {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+.checkbox {
+  width: 1rem;
+  height: 2rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(232 232 232);
+  /* color: black; */
+  color: red;
+}
+.shop-card:hover {
+  /* border: 2px solid #da81338f; */
+  -webkit-box-shadow: 0px 0px 13px 1px #da81338f;
+  -moz-box-shadow: 0px 0px 13px 1px #da81338f;
+  box-shadow: 0px 0px 13px 1px #da81338f;
 }
 .shop-card-img {
   border-radius: 1rem;
   overflow: hidden;
+}
+.shop-card-img img {
+  transition: all 0.2s ease-in;
+}
+.shop-card-img img:hover {
+  transform: scale(1.2);
+}
+#delete-item {
+  background-color: rgb(217 127 73 / 75%) !important;
+}
+.form-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+footer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
