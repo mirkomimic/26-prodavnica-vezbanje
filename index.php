@@ -129,7 +129,8 @@ if (isset($_POST['add-item'])) {
     "name" => $_POST['name'],
     "stock" => $_POST['stock'],
     "price" => $_POST['price'],
-    "date" => date("d.m.y", strtotime($_POST['date'])),
+    // "date" => date("d.m.y", strtotime($_POST['date'])),
+    "date" => date("m/d/y", strtotime($_POST['date'])),
   );
   header("Location: .");
   include "shop.php";

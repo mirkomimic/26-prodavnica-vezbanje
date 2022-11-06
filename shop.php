@@ -9,6 +9,7 @@ if (isset($_GET['search-input'])) {
   $priceHighest = "";
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -48,23 +49,23 @@ if (isset($_GET['search-input'])) {
           <fieldset>
             <legend>Category: </legend>
             <div class="form-control">
-              <input class="checkbox" type="checkbox" name="category" id="asus" value="asus">
+              <input class="checkbox" type="checkbox" name="category" id="asus" value="asus" <?php if (isset($_GET['category']) && $_GET['category'] == "asus") { echo "checked"; } ?>>
               <label for="asus">Asus</label>
             </div>
             <div class="form-control">
-              <input class="checkbox" type="checkbox" name="category" id="acer" value="acer">
+              <input class="checkbox" type="checkbox" name="category" id="acer" value="acer" <?php if (isset($_GET['category']) && $_GET['category'] == "acer") { echo "checked"; } ?>>
               <label for="acer">Acer</label>
             </div>
             <div class="form-control">
-              <input class="checkbox" type="checkbox" name="category" id="benq" value="benq">
+              <input class="checkbox" type="checkbox" name="category" id="benq" value="benq" <?php if (isset($_GET['category']) && $_GET['category'] == "benq") { echo "checked"; } ?>>
               <label for="benq">BenQ</label>
             </div>
             <div class="form-control">
-              <input class="checkbox" type="checkbox" name="category" id="logitech" value="logitech">
+              <input class="checkbox" type="checkbox" name="category" id="logitech" value="logitech" <?php if (isset($_GET['category']) && $_GET['category'] == "logitech") { echo "checked"; } ?>>
               <label for="logitech">Logitech</label>
             </div>
             <div class="form-control">
-              <input class="checkbox" type="checkbox" name="category" id="razer" value="razer">
+              <input class="checkbox" type="checkbox" name="category" id="razer" value="razer" <?php if (isset($_GET['category']) && $_GET['category'] == "razer") { echo "checked"; } ?>>
               <label for="razer">Razer</label>
             </div>
           </fieldset><br>
@@ -76,6 +77,7 @@ if (isset($_GET['search-input'])) {
             <option value="priceD" <?php if(isset($_GET['sortSelect']) && $_GET['sortSelect'] == "priceD") { echo "selected"; } ?>>Price &darr;</option>
             <option value="priceA" <?php if(isset($_GET['sortSelect']) && $_GET['sortSelect'] == "priceA") { echo "selected"; } else echo ""; ?>>Price &uarr;</option>
           </select><br>
+          <!-- date filter -->
             <label for="dateFrom">Date from:</label>
             <input type="date" name="" id="dateFrom" >
             <label for="dateTo">Date to:</label>
@@ -106,7 +108,7 @@ if (isset($_GET['search-input'])) {
             <div class="admin-kolicina">
               <p>Stock: <?= $item['stock'] ?></p>
             </div>
-            <p><?= $item['date'] ?></p>
+            <p><?= date("d.m.y", strtotime($item['date'])) ?></p>
             <div class="form-control">
               <input type="submit" value="Edit" name="edit-item">
               <input type="submit" value="Delete" name="delete-item" id="delete-item">
@@ -131,7 +133,7 @@ if (isset($_GET['search-input'])) {
             <div class="admin-kolicina">
               <p>Stock: <?= $item['stock'] ?></p>
             </div>
-            <p><?= $item['date'] ?></p>
+            <p><?= date("d.m.y", strtotime($item['date'])) ?></p>
             <div class="form-control">
               <input type="submit" value="Edit" name="edit-item">
               <input type="submit" value="Delete" name="delete-item" id="delete-item">

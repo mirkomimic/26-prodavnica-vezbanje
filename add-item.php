@@ -15,7 +15,7 @@
         <input type="text" name="name" id="" placeholder="name">
         <input type="text" name="stock" id="" placeholder="stock">
         <input type="text" name="price" id="" placeholder="price">
-        <input type="text" name="date" id="" placeholder="date">
+        <input type="date" name="date" id="" placeholder="date" >
         <!-- <input type="submit" value="Add Item" name="add-item"> -->
       </form><br>
       <div class="form-control">
